@@ -4,18 +4,18 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () =>
-      import('./layout/layout.module').then((m) => m.LayoutModule)
+      import('./layout/layout.module').then((m) => m.LayoutModule),
   },
   {
-    path: "not-found",
+    path: 'not-found',
     loadChildren: () =>
       import('./not-found/not-found.module').then((m) => m.NotFoundModule),
   },
-  { path: "**", redirectTo: "not-found" },
+  { path: '**', redirectTo: 'not-found' },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -7,7 +7,7 @@
 }
 
 .search-form {
-  display: flex;
+  display: contents;
 }
 
 .tables {
@@ -27,8 +27,8 @@
 
 :host {
   ::ng-deep {
-    .mat-mdc-form-field-infix {
-      width: 300px !important;
+    .autocomplete .mat-mdc-form-field-infix {
+      width: 236px !important;
     }
   }
 }
